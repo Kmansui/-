@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurred Image</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        img {
+            max-width: 90%;
+            max-height: 80vh;
+            height: auto;
+            display: block;
+            margin: 10px 0;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Original Image</h1>
+    <img src="{{ url_for('uploaded_file', filename=original_image) }}" alt="Original Image">
+    <h1>Blurred Image</h1>
+    <img src="{{ url_for('processed_file', filename=processed_image) }}" alt="Blurred Image">
+    <button onclick="goBack()">Back to Upload</button>
+    <script>
+        function goBack() {
+            window.location.href = "{{ url_for('upload_files') }}";
+        }
+    </script>
+</body>
+</html>

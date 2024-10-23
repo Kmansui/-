@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Image</title>
+</head>
+<body>
+    <h1>Uploaded Image: {{ filename }}</h1>
+    <img src="{{ url_for('uploads', filename=filename) }}" alt="Uploaded Image"><br>
+    <form action="{{ url_for('blur_image', filename=filename) }}" method="post">
+        <button type="submit">Blur Image</button>
+    </form>
+</body>
+</html>

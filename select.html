@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Image</title>
+</head>
+<body>
+    <h1>Select Image to Blur</h1>
+    <form action="/select" method="post">
+        <select name="selected_file">
+            {% for file in files %}
+                <option value="{{ file }}">{{ file }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Process">
+    </form>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Image</title>
+</head>
+<body>
+    <h1>Original and Processed Image</h1>
+    <h2>Original Image</h2>
+    <img src="{{ url_for('uploaded_file', filename=original_image) }}" alt="Original Image" style="max-width: 500px;">
+    <h2>Processed Image</h2>
+    <img src="{{ url_for('processed_file', filename=processed_image) }}" alt="Processed Image" style="max-width: 500px;">
+</body>
+</html>

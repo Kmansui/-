@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="[라벨]자동차번호판OCR_valid">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/result/자동차 차종-연식-번호판 인식용 영상/Validation/[라벨]자동차번호판OCR_valid.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
